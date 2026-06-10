@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | Da-Wei Lu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        .editorial-title { font-family: 'Playfair Display', Georgia, serif; }
+        .bg-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, #171717 0%, #000000 100%);
+            z-index: -1;
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-black text-slate-100 min-h-screen">
+
+    <div class="bg-mesh"></div>
+
+    <header class="fixed top-0 left-0 w-full z-40 flex items-center justify-between px-6 md:px-12 h-20 bg-black/60 backdrop-blur-xl border-b border-zinc-800/50">
+        <a href="index.html" class="text-sm font-bold tracking-tight text-white hover:text-blue-400 transition-colors">Da-Wei Lu</a>
+        <nav class="flex items-center space-x-4 md:space-x-8">
+            <a href="index.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition-colors">Home</a>
+            <a href="academics.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-blue-400 underline underline-offset-4">Academics</a>
+            <a href="vex.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-amber-400 transition-colors">Robotics</a>
+            <a href="semiconductors.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-indigo-400 transition-colors">Research</a>
+            <a href="other.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-purple-400 transition-colors">Other</a>
+        </nav>
+    </header>
+
+    <main class="w-full pb-20">
+        <section class="relative w-full pt-48 pb-32 px-6 md:px-12 flex items-center overflow-hidden border-b border-zinc-800">
+            <img src="https://www.eduexperts.co.nz/img/contents/screen-shot-2025-04-25-at-12.36.21-am-dgqxye.png" alt="Academic Background" class="absolute inset-0 w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+            <div class="max-w-4xl relative z-10 space-y-4">
+                <h1 class="editorial-title text-6xl font-bold text-white tracking-tight">Academic Record</h1>
+                <p class="text-slate-300 text-lg max-w-2xl leading-relaxed">
+                    A comprehensive overview of my rigorous academic journey, focusing on advanced placement courses and core engineering foundations that have shaped my technical problem-solving skills.
+                </p>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto space-y-20 pt-20 px-6 md:px-12">
+            <!-- AP Courses Section -->
+            <section class="reveal active space-y-8">
+                <div class="border-b border-zinc-800 pb-12">
+                    <h2 class="text-4xl editorial-title font-bold text-blue-500 mb-2">AP Courses</h2>
+                    <h3 class="text-2xl font-medium text-slate-300 mb-8 italic">AP Scholar with Distinction</h3>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Physics C: E&M (5)</h4><p class="text-xs text-slate-400 mt-1">Exploration of electrostatic and electromagnetic field theory.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Physics C: Mechanics (5)</h4><p class="text-xs text-slate-400 mt-1">Study of kinematics, dynamics, energy, and angular motion.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Calculus BC (5)</h4><p class="text-xs text-slate-400 mt-1">Advanced calculus including derivatives and series.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Chemistry (5)</h4><p class="text-xs text-slate-400 mt-1">Analysis of chemical reactions and thermochemistry.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Computer Science A (5)</h4><p class="text-xs text-slate-400 mt-1">Object-oriented programming and algorithmic design.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Statistics</h4><p class="text-xs text-slate-400 mt-1">Statistical analysis and data collection methods.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Biology</h4><p class="text-xs text-slate-400 mt-1">Evolution, genetics, and complex biological systems.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Macroeconomics</h4><p class="text-xs text-slate-400 mt-1">Analysis of national economic indicators and policy.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Microeconomics</h4><p class="text-xs text-slate-400 mt-1">Supply, demand, and individual firm behaviors.</p></div>
+                            <div class="p-5 bg-zinc-900/50 border border-zinc-800 rounded-xl"><h4 class="font-bold text-white">AP Precalculus (5)</h4><p class="text-xs text-slate-400 mt-1">Foundational preparation in algebraic functions.</p></div>
+                        </div>
+                        <div class="lg:col-span-4 space-y-4">
+                            <img src="https://www.ontocollege.com/wp-content/uploads/2020/06/AP-Test-Scores.png" alt="AP Scores" class="w-full rounded-xl border border-zinc-800 shadow-xl opacity-90">
+                            <img src="https://www.mciinstitute.edu.au/hubfs/The%20Four%20D%E2%80%99s%20of%20Success%20-%20sucess.png" alt="Four D's of Success" class="w-full rounded-xl border border-zinc-800 shadow-xl opacity-90">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SAT Section -->
+            <section class="reveal active space-y-8 border-b border-zinc-800 pb-12">
+                <div class="space-y-2">
+                    <h2 class="text-4xl editorial-title font-bold text-blue-500">SAT</h2>
+                    <p class="text-slate-400 max-w-2xl italic">Standardized assessment evaluating critical reading, writing, and mathematical reasoning skills.</p>
+                </div>
+                <div class="p-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1 text-center md:text-left space-y-4">
+                        <span class="text-slate-400 block text-xs uppercase tracking-widest font-bold">Total Score</span>
+                        <h3 class="text-6xl font-extrabold text-white">1490</h3>
+                    </div>
+                    <div class="flex-[2] flex w-full gap-4 pt-4 md:pt-0 border-t md:border-t-0 md:border-l border-zinc-800 md:pl-8">
+                        <div class="flex-1 text-center"><span class="text-slate-400 block text-xs uppercase tracking-widest font-bold">Reading/Writing</span><h4 class="text-4xl font-bold text-blue-400">700</h4></div>
+                        <div class="flex-1 text-center"><span class="text-slate-400 block text-xs uppercase tracking-widest font-bold">Math</span><h4 class="text-4xl font-bold text-blue-400">790</h4></div>
+                    </div>
+                </div>
+                <div class="flex justify-center pt-8"><img src="https://educatewithace.com/wp-content/uploads/2025/07/sat-logo-780x439-1.jpg" alt="SAT Logo" class="w-full max-w-md h-auto opacity-80 rounded-2xl border border-zinc-700 shadow-2xl"></div>
+            </section>
+
+            <!-- GPA Section -->
+            <section class="reveal active space-y-8 border-b border-zinc-800 pb-12">
+                <h2 class="text-4xl editorial-title font-bold text-blue-500">GPA</h2>
+                <p class="text-slate-400 max-w-2xl italic">Cumulative academic performance reflecting my scholastic achievements and dedication to my coursework.</p>
+                <div class="p-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1 grid grid-cols-2 gap-4">
+                        <div class="bg-black/30 p-6 rounded-xl border border-zinc-800 text-center">
+                            <span class="text-slate-400 block text-xs uppercase tracking-widest font-bold mb-2">Weighted</span>
+                            <h3 class="text-5xl font-extrabold text-blue-400">4.5</h3>
+                        </div>
+                        <div class="bg-black/30 p-6 rounded-xl border border-zinc-800 text-center">
+                            <span class="text-slate-400 block text-xs uppercase tracking-widest font-bold mb-2">Unweighted</span>
+                            <h3 class="text-5xl font-extrabold text-blue-400">93.1%</h3>
+                        </div>
+                    </div>
+                    <img src="https://www.htiedu.tw/wp-content/uploads/2025/02/image1-1.jpg" alt="GPA Academic Reference" class="w-64 h-auto rounded-lg border border-zinc-700 shadow-lg"/>
+                </div>
+            </section>
+
+            <!-- TOEFL Section -->
+            <section class="reveal active space-y-8 pb-20">
+                <div class="space-y-2">
+                    <h2 class="text-4xl editorial-title font-bold text-blue-500">TOEFL</h2>
+                    <p class="text-slate-400 max-w-2xl italic">English proficiency assessment scores.</p>
+                </div>
+                <div class="p-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1 text-center md:text-left space-y-4">
+                        <span class="text-slate-400 block text-xs uppercase tracking-widest font-bold">Total Score</span>
+                        <h3 class="text-6xl font-extrabold text-white">93</h3>
+                    </div>
+                    <div class="flex-[2] grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 md:pt-0 border-t md:border-t-0 md:border-l border-zinc-800 md:pl-8">
+                        <div class="text-center"><span class="text-slate-400 block text-xs uppercase tracking-widest font-bold">Reading</span><h4 class="text-2xl font-bold text-blue-400">27</h4></div>
+                        <div class="text-center"><span class="text-slate-400 block text-xs uppercase tracking-widest font-bold">Listening</span><h4 class="text-2xl font-bold text-blue-400">22</h4></div>
+                        <div class="text-center"><span class="text-slate-400 block text-xs uppercase tracking-widest font-bold">Speaking</span><h4 class="text-2xl font-bold text-blue-400">20</h4></div>
+                        <div class="text-center"><span class="text-slate-400 block text-xs uppercase tracking-widest font-bold">Writing</span><h4 class="text-2xl font-bold text-blue-400">24</h4></div>
+                    </div>
+                </div>
+                <div class="flex justify-center pt-8"><img src="https://yt3.googleusercontent.com/sD8Eta9XbAvbTn36EmAM0foHcg0Hr_eZsTfsOaVaKlXOGiwGDj5GN22wOHBhabY9zVtEq6-JYEk=s900-c-k-c0x00ffffff-no-rj" alt="TOEFL Logo" class="w-full max-w-[200px] h-auto opacity-80"></div>
+            </section>
+
+            <!-- Footer Contact -->
+            <footer class="pt-16 border-t border-zinc-800 reveal">
+                <div class="flex flex-col items-center justify-center text-center space-y-2">
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-white">Contact Me</h3>
+                    <a href="mailto:h1130648@stu.wghs.tp.edu.tw" class="text-slate-400 hover:text-white transition-colors text-lg italic underline decoration-zinc-700 underline-offset-4">h1130648@stu.wghs.tp.edu.tw</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
