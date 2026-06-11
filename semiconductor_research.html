@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Da-Wei Lu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        .editorial-title { font-family: 'Playfair Display', Georgia, serif; }
+        .bg-mesh { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #171717 0%, #000000 100%); z-index: -1; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-black text-slate-100 min-h-screen">
+    <div class="bg-mesh"></div>
+
+    <header class="fixed top-0 left-0 w-full z-40 flex items-center justify-between px-6 md:px-12 h-20 bg-black/60 backdrop-blur-xl border-b border-zinc-800/50">
+        <a href="index.html" class="text-sm font-bold tracking-tight text-white hover:text-indigo-400 transition-colors">Da-Wei Lu</a>
+        <nav class="flex items-center space-x-4 md:space-x-8">
+            <a href="index.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition-colors">Home</a>
+            <a href="academics.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-blue-400 transition-colors">Academics</a>
+            <a href="robotics.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-amber-400 transition-colors">Robotics</a>
+            <a href="semiconductors.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-indigo-400 underline underline-offset-4">Research</a>
+            <a href="other.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-purple-400 transition-colors">Other</a>
+        </nav>
+    </header>
+
+    <main class="w-full pb-20">
+        <section class="relative w-full pt-48 pb-32 px-6 md:px-12 flex items-center overflow-hidden border-b border-zinc-800">
+            <div class="absolute inset-0 z-0">
+                <img src="https://www.starnetlibraries.org/2020/wp-content/uploads/2021/04/Engineering-Image.jpg" alt="Research Background" class="w-full h-full object-cover opacity-20">
+                <div class="absolute inset-0 bg-black/70"></div>
+            </div>
+            <div class="max-w-4xl relative z-10 space-y-4">
+                <span class="text-indigo-400 font-bold tracking-widest uppercase text-xs">Research Overview</span>
+                <h1 class="editorial-title text-5xl md:text-6xl font-bold text-white tracking-tight">NTHU Semiconductor Lab</h1>
+                <p class="text-slate-300 text-lg max-w-2xl leading-relaxed italic">
+                    "Working hands-on at the epicenter of silicon technology at NTHU, I engage in advanced hardware analysis, as well as the design and characterization of nanoscale transistors and memory cells. My work bridges theoretical microelectronics and physical engineering execution."
+                </p>
+            </div>
+        </section>
+
+        <div class="max-w-5xl mx-auto space-y-20 pt-20 px-6 md:px-12">
+            
+            <section class="reveal active space-y-12">
+                <h2 class="text-3xl editorial-title font-bold text-indigo-400 border-b border-zinc-800 pb-4">Core Research Pillars</h2>
+                
+                <div class="space-y-16">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-white border-l-4 border-indigo-500 pl-4">Transistor & Memory Design</h3>
+                            <p class="text-slate-300 leading-relaxed">Assisting in the layout, simulation, and evaluation of next-generation semiconductor devices, focusing on scaling limits and electrical performance metrics essential for modern computational architectures.</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="https://www.build-electronic-circuits.com/wp-content/uploads/2018/02/transistor.jpg" alt="Transistor" class="w-3/4 h-48 object-cover rounded-xl border border-zinc-800 shadow-xl">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4 order-2 md:order-1">
+                            <h3 class="text-2xl font-bold text-white border-l-4 border-indigo-500 pl-4">Equipment Validation & Calibration</h3>
+                            <p class="text-slate-300 leading-relaxed">Ensuring complex lab machinery and characterization equipment operate within strict tolerances. This rigorous maintenance is crucial to prevent data drift and ensure the integrity of high-precision experimental results.</p>
+                        </div>
+                        <div class="flex justify-center order-1 md:order-2">
+                            <img src="https://engineering.tamu.edu/mechanical/_files/_images/_content-images/LAB-MEEN-CiMDM.jpg" alt="Lab Equipment" class="w-3/4 h-48 object-cover rounded-xl border border-zinc-800 shadow-xl">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <h3 class="text-2xl font-bold text-white border-l-4 border-indigo-500 pl-4">Hardware & Device Troubleshooting</h3>
+                            <p class="text-slate-300 leading-relaxed">Systematically isolating variables and diagnosing physical or script-based failures during wafer testing, device characterization, and data acquisition cycles to minimize downtime.</p>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="https://media.proprofs.com/images/QM/user_images/2503852/New%20Project%20(18)(187).jpg" alt="Hardware Troubleshooting" class="w-3/4 h-48 object-cover rounded-xl border border-zinc-800 shadow-xl">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4 order-2 md:order-1">
+                            <h3 class="text-2xl font-bold text-white border-l-4 border-indigo-500 pl-4">Data & Process Analysis</h3>
+                            <p class="text-slate-300 leading-relaxed">Utilizing solid-state physics and microelectronics principles to analyze the electrical characteristics (such as I-V curves) of transistors and memory arrays to support broader research objectives and yield optimization.</p>
+                        </div>
+                        <div class="flex justify-center order-1 md:order-2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRwUh36RLUWBeE81K6jRSU2oMGqhAdehbVlQ&s" alt="Data Analysis" class="w-3/4 h-48 object-cover rounded-xl border border-zinc-800 shadow-xl">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="pt-16 border-t border-zinc-800 reveal">
+                <div class="flex flex-col items-center justify-center text-center space-y-2">
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-white">Contact Me</h3>
+                    <a href="mailto:h1130648@stu.wghs.tp.edu.tw" class="text-slate-400 hover:text-white transition-colors text-lg italic underline decoration-zinc-700 underline-offset-4">h1130648@stu.wghs.tp.edu.tw</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
