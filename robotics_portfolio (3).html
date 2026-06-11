@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics | Da-Wei Lu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        .editorial-title { font-family: 'Playfair Display', Georgia, serif; }
+        .bg-mesh { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, #171717 0%, #000000 100%); z-index: -1; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-black text-slate-100 min-h-screen">
+    <div class="bg-mesh"></div>
+
+    <header class="fixed top-0 left-0 w-full z-40 flex items-center justify-between px-6 md:px-12 h-20 bg-black/60 backdrop-blur-xl border-b border-zinc-800/50">
+        <a href="index.html" class="text-sm font-bold tracking-tight text-white hover:text-amber-400 transition-colors">Da-Wei Lu</a>
+        <nav class="flex items-center space-x-4 md:space-x-8">
+            <a href="index.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-white transition-colors">Home</a>
+            <a href="academics.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-blue-400 transition-colors">Academics</a>
+            <a href="robotics.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-amber-400 underline underline-offset-4">Robotics</a>
+            <a href="semiconductors.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-indigo-400 transition-colors">Research</a>
+            <a href="other.html" class="text-[10px] md:text-xs font-bold uppercase tracking-wider text-slate-400 hover:text-purple-400 transition-colors">Other</a>
+        </nav>
+    </header>
+
+    <main class="w-full pb-20">
+        <section class="relative w-full pt-48 pb-32 px-6 md:px-12 flex items-center overflow-hidden border-b border-zinc-800">
+            <div class="absolute inset-0 z-0">
+                <img src="https://www.vaughn.edu/wp-content/uploads/2021/01/Mechanical-Engineering-Jobs_Feature.jpg" alt="Engineering Background" class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+            <div class="max-w-4xl relative z-10 space-y-4">
+                <span class="text-amber-400 font-bold tracking-widest uppercase text-xs">Robotics Overview</span>
+                <h1 class="editorial-title text-5xl md:text-6xl font-bold text-white tracking-tight">Engineering the Future</h1>
+                <p class="text-slate-300 text-lg max-w-2xl leading-relaxed italic">
+                    "My journey in VEX Robotics has been a hands-on evolution from assembling standard parts to engineering custom mechanisms and writing autonomous control loops. It has taught me how to bridge the gap between theoretical CAD designs and robust, physical machines operating under strict game constraints."
+                </p>
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto space-y-24 pt-20 px-6 md:px-12">
+            
+            <!-- Achievements Section -->
+            <section class="reveal active space-y-8">
+                <h2 class="text-3xl editorial-title font-bold text-amber-400 border-b border-zinc-800 pb-4">Competition Achievements</h2>
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-amber-500/10 p-6 rounded-xl border border-amber-500/30 space-y-2">
+                            <h4 class="font-bold text-amber-400">National Excellence</h4>
+                            <p class="text-sm text-slate-300">Tournament Champion, Skills Champion, and Think Award recipient at the Taiwan National Championship.</p>
+                        </div>
+                        <div class="bg-amber-500/10 p-6 rounded-xl border border-amber-500/30 space-y-2">
+                            <h4 class="font-bold text-amber-400">Intl. Signature Event</h4>
+                            <p class="text-sm text-slate-300">Tournament Champion at the Vietnam Signature Event.</p>
+                        </div>
+                        <div class="bg-amber-500/10 p-6 rounded-xl border border-amber-500/30 space-y-2">
+                            <h4 class="font-bold text-amber-400">World Ranking</h4>
+                            <p class="text-sm text-slate-300">Ranked 58th out of 800+ teams in the global skills ranking at the VEX World Championship.</p>
+                        </div>
+                        <div class="bg-amber-500/10 p-6 rounded-xl border border-amber-500/30 space-y-2">
+                            <h4 class="font-bold text-amber-400">Competitive Rigor</h4>
+                            <p class="text-sm text-slate-300">Proven track record of success in high-pressure, elite-tier international robotics arenas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <img src="https://i.postimg.cc/cHTN9K20/IMG-2023.jpg" alt="Achievement 1" class="w-full h-72 object-cover rounded-xl border border-zinc-800 shadow-xl">
+                        <img src="https://i.postimg.cc/NFMvWsvB/634D02C9-614C-4C88-BFD5-3D6F8504DF10.jpg" alt="Achievement 2" class="w-full h-72 object-cover rounded-xl border border-zinc-800 shadow-xl">
+                    </div>
+                </div>
+            </section>
+
+            <section class="reveal active space-y-8">
+                <h2 class="text-3xl editorial-title font-bold text-amber-400 border-b border-zinc-800 pb-4">Technical Competencies</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-zinc-900/50 p-6 rounded-xl border border-zinc-800 space-y-2">
+                        <h4 class="font-bold text-white">Mechanical Design</h4>
+                        <p class="text-xs text-slate-400">Intake mechanisms, drivetrain geometry, center of mass (SolidWorks/CAD).</p>
+                    </div>
+                    <div class="bg-zinc-900/50 p-6 rounded-xl border border-zinc-800 space-y-2">
+                        <h4 class="font-bold text-white">Rapid Prototyping</h4>
+                        <p class="text-xs text-slate-400">Weight reduction, structural bracing, and stress management.</p>
+                    </div>
+                    <div class="bg-zinc-900/50 p-6 rounded-xl border border-zinc-800 space-y-2">
+                        <h4 class="font-bold text-white">Control Systems</h4>
+                        <p class="text-xs text-slate-400">Autonomous routing, sensor integration, PID loops (C++).</p>
+                    </div>
+                    <div class="bg-zinc-900/50 p-6 rounded-xl border border-zinc-800 space-y-2">
+                        <h4 class="font-bold text-white">Systems Integration</h4>
+                        <p class="text-xs text-slate-400">Wire management, motor limits, and hardware-software debugging.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Section (Resized) -->
+            <section class="reveal active space-y-8">
+                <h2 class="text-3xl editorial-title font-bold text-amber-400 border-b border-zinc-800 pb-4">Project Showcase</h2>
+                <div class="flex justify-center">
+                    <div class="aspect-video w-full max-w-2xl rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ZvsKGaoeNLE?si=1GWMc1GWSOnVceYC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reveal active space-y-8">
+                <h2 class="text-3xl editorial-title font-bold text-amber-400 border-b border-zinc-800 pb-4">Key Projects & Iterations</h2>
+                <div class="space-y-8">
+                    <div class="border-l-2 border-amber-500 pl-6 space-y-2">
+                        <h4 class="text-xl font-bold text-white">Robot V1: The Foundation</h4>
+                        <p class="text-sm text-slate-300">Focused on initial chassis stability. Identified structural flaws during high-velocity turns, leading to vital lessons in weight distribution.</p>
+                    </div>
+                    <div class="border-l-2 border-amber-500 pl-6 space-y-2">
+                        <h4 class="text-xl font-bold text-white">Robot V2: The Iteration</h4>
+                        <p class="text-sm text-slate-300">Redesigned intake geometry and modified gear ratios. The performance bump was significant, enabling consistent, high-speed field traversal.</p>
+                    </div>
+                    <div class="border-l-2 border-amber-500 pl-6 space-y-2">
+                        <h4 class="text-xl font-bold text-white">Autonomous Subsystem</h4>
+                        <p class="text-sm text-slate-300">Developed C++ routines that utilized encoder feedback to perform precision scoring sequences without driver intervention.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reveal active grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl editorial-title font-bold text-amber-400">Engineering Philosophy</h2>
+                    <img src="https://student-editorials.blogs.auckland.ac.nz/files/2025/08/mj_11351_4.jpg" alt="Engineering Philosophy Visual" class="w-full h-64 object-cover rounded-xl border border-zinc-800 shadow-xl mb-4">
+                    <ul class="space-y-4 text-slate-300 text-sm list-disc pl-4">
+                        <li><strong>Design for Serviceability:</strong> Building with the expectation of failure to allow for rapid in-match repairs.</li>
+                        <li><strong>Embracing Iterative Failure:</strong> Viewing early prototypes as critical data collection phases rather than setbacks.</li>
+                        <li><strong>Cross-Disciplinary Harmony:</strong> Acknowledging that mechanical and software systems must function as a unified architecture.</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 text-center space-y-4">
+                    <h3 class="text-xl font-bold text-white">Team Leadership</h3>
+                    <p class="text-sm text-slate-400">As Lead Builder/Captain, I mentored members in fabrication, managed timelines for national competitions, and refined match strategy with drive teams.</p>
+                </div>
+            </section>
+
+            <footer class="pt-16 border-t border-zinc-800 reveal">
+                <div class="flex flex-col items-center justify-center text-center space-y-2">
+                    <h3 class="text-sm font-bold uppercase tracking-widest text-white">Contact Me</h3>
+                    <a href="mailto:h1130648@stu.wghs.tp.edu.tw" class="text-slate-400 hover:text-white transition-colors text-lg italic underline decoration-zinc-700 underline-offset-4">h1130648@stu.wghs.tp.edu.tw</a>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
