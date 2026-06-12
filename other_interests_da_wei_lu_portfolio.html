@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DA-WEI_LU // SYSTEM_OTHER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;800&display=swap');
+        
+        body { background: #000; font-family: 'Space Mono', monospace; color: #a855f7; overflow-x: hidden; cursor: none; }
+
+        /* Boot Animation */
+        #boot-screen {
+            position: fixed; inset: 0; z-index: 10000;
+            background: #000; display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            transition: opacity 0.8s ease;
+        }
+        .boot-text { color: #a855f7; font-family: 'Orbitron'; letter-spacing: 0.5em; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        .neon-glow-purple { text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7; }
+        .border-neon { border: 1px solid rgba(168, 85, 247, 0.3); transition: all 0.3s; }
+        .border-neon:hover { border-color: #a855f7; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+
+        .bg-grid {
+            position: fixed; inset: 0; z-index: -1;
+            background-image: linear-gradient(rgba(168, 85, 247, 0.05) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .cursor-trail {
+            position: fixed; width: 12px; height: 12px;
+            background: #a855f7; border-radius: 50%;
+            pointer-events: none; z-index: 9999;
+            box-shadow: 0 0 15px #a855f7, 0 0 30px #a855f7;
+            will-change: transform;
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        canvas { background: #050505; border: 2px solid #a855f7; cursor: crosshair; display: block; margin: 0 auto; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <!-- Boot Sequence -->
+    <div id="boot-screen">
+        <h1 class="boot-text text-xl md:text-3xl">INITIALIZING_SYSTEM_MODULE...</h1>
+        <div class="w-64 h-1 bg-zinc-800 mt-8 relative overflow-hidden">
+            <div id="progress" class="absolute h-full bg-purple-500 w-0 transition-all duration-300"></div>
+        </div>
+    </div>
+
+    <div class="bg-grid"></div>
+    <div class="cursor-trail" id="cursor"></div>
+
+    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 h-24 bg-black/80 backdrop-blur-md border-b border-purple-900/50">
+        <a href="homepage.html" class="text-xl font-bold tracking-[0.4em] text-white font-[Orbitron]">DA-WEI_LU</a>
+        <nav class="flex items-center space-x-12 text-xs font-bold uppercase tracking-[0.2em] text-purple-300">
+            <a href="homepage.html" class="hover:text-white transition">/Home</a>
+            <a href="other_interests_da_wei_lu.html" class="text-purple-400 underline neon-glow-purple">/Other</a>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto pt-48 space-y-24">
+        <section class="reveal active text-center">
+            <h2 class="text-6xl md:text-9xl font-black tracking-tighter text-white neon-glow-purple mb-8">// EXTRACURRICULAR</h2>
+        </section>
+
+        <!-- (Content sections remain the same) -->
+        <section class="reveal space-y-8">
+            <h3 class="text-3xl text-white font-bold tracking-widest border-b border-purple-500 pb-2 neon-glow-purple">// LEADERSHIP_&_RESEARCH</h3>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">PRISM Research Club</h4>
+                <p class="text-purple-300 text-sm mt-2">Co-founder. Mentored 25+ students in experimental design and research paper writing, contributing to National Science Fair participation.</p>
+            </div>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">English Drama Contest</h4>
+                <p class="text-purple-300 text-sm mt-2">Best Director Award. Led a three-month production, earning six total awards while coordinating teamwork and communication.</p>
+            </div>
+
+            <h3 class="text-3xl text-white font-bold tracking-widest pt-12 border-b border-purple-500 pb-2 neon-glow-purple">// MATH_&_SCIENCE</h3>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">TRML Competition</h4>
+                <p class="text-purple-300 text-sm mt-2">Selected participant in Taiwan's highly competitive mathematics league, focusing on intensive problem-solving.</p>
+            </div>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">AMC 10 Contest</h4>
+                <p class="text-purple-300 text-sm mt-2">Achieved a score of 93.5 in this internationally recognized mathematics competition.</p>
+            </div>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">Physics Debate Club</h4>
+                <p class="text-purple-300 text-sm mt-2">Advanced experimental analysis and collaborative scientific discussion skills.</p>
+            </div>
+
+            <h3 class="text-3xl text-white font-bold tracking-widest pt-12 border-b border-purple-500 pb-2 neon-glow-purple">// STRATEGY_&_ATHLETICS</h3>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">Go & Chess</h4>
+                <p class="text-purple-300 text-sm mt-2">Amateur 2 Dan (Go). Expanded interest to competitive chess in 10th grade, participating in inter-club tournaments.</p>
+            </div>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">Basketball</h4>
+                <p class="text-purple-300 text-sm mt-2">Seven years of competition; multiple first-place finishes in school tournaments. Built leadership and resilience.</p>
+            </div>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">Swimming & Golf</h4>
+                <p class="text-purple-300 text-sm mt-2">Long-term fitness through swimming and dedicated mechanics-focused golf training.</p>
+            </div>
+
+            <h3 class="text-3xl text-white font-bold tracking-widest pt-12 border-b border-purple-500 pb-2 neon-glow-purple">// GLOBAL_PERSPECTIVES</h3>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">International Travels</h4>
+                <p class="text-purple-300 text-sm mt-2">Broadened my horizons through explorations of England, France, Austria, Germany, Japan, Hong Kong, and Australia.</p>
+            </div>
+            <div class="border-neon p-6 rounded-lg bg-black/40 hover:bg-purple-900/10">
+                <h4 class="text-lg font-bold text-white">United States</h4>
+                <p class="text-purple-300 text-sm mt-2">Gained exposure to diverse cultural and urban landscapes in Chicago, New York, Boston, San Francisco, Los Angeles, and Ohio.</p>
+            </div>
+        </section>
+
+        <section class="reveal pt-12 pb-24 text-center">
+            <h3 class="text-2xl text-white font-bold mb-2">// SYSTEM_INTERLUDE: REACTOR_BREAKER</h3>
+            <div class="flex justify-center gap-8 mb-4 text-purple-300 font-bold">
+                <span>SCORE: <span id="currentScore" class="text-white">0</span></span>
+                <span>HIGH_SCORE: <span id="highScore" class="text-white">0</span></span>
+            </div>
+            <div class="inline-block border-neon p-2 bg-black">
+                <canvas id="gameCanvas" width="600" height="300"></canvas>
+            </div>
+            <p class="text-purple-400 mt-4 text-xs tracking-widest">USE_MOUSE_TO_CONTROL_PADDLE</p>
+        </section>
+    </main>
+
+    <footer class="mt-32 p-12 text-center border-t border-purple-900/30 text-purple-700 font-bold reveal">
+        <div class="flex flex-col items-center justify-center space-y-4">
+            <h4 class="text-white text-sm font-bold uppercase tracking-widest">// CONTACT_POINT //</h4>
+            <a href="mailto:ludawei123456789@gmail.com" class="text-purple-400 hover:text-white transition-colors text-lg italic underline decoration-purple-500 underline-offset-4">ludawei123456789@gmail.com</a>
+        </div>
+        <p class="mt-12">// END_OF_SYSTEM_LOG //</p>
+    </footer>
+
+    <script>
+        // Boot Animation Logic
+        window.addEventListener('load', () => {
+            const progress = document.getElementById('progress');
+            const bootScreen = document.getElementById('boot-screen');
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    bootScreen.style.opacity = '0';
+                    setTimeout(() => bootScreen.remove(), 800);
+                } else {
+                    width += 5;
+                    progress.style.width = width + '%';
+                }
+            }, 30);
+        });
+
+        // Mouse Trail
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const scoreEl = document.getElementById('currentScore');
+        const highEl = document.getElementById('highScore');
+        
+        let paddleX = 250, score = 0, highScore = 0;
+        let ballX = 300, ballY = 150, dx = 4, dy = -4;
+        let isColliding = false;
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#a855f7';
+            ctx.fillRect(paddleX, 280, 100, 10);
+            ctx.beginPath();
+            ctx.arc(ballX, ballY, 8, 0, Math.PI*2);
+            ctx.fillStyle = '#fff';
+            ctx.fill();
+            ctx.closePath();
+            ballX += dx; ballY += dy;
+            if(ballX < 8 || ballX > 592) dx = -dx;
+            if(ballY < 8) dy = -dy;
+            if(ballY > 272 && ballX > paddleX && ballX < paddleX + 100) {
+                if(!isColliding) { dy = -dy; score += 10; dx *= 1.05; dy *= 1.05; scoreEl.textContent = score;
+                    if(score > highScore) { highScore = score; highEl.textContent = highScore; }
+                    isColliding = true;
+                }
+            } else { isColliding = false; }
+            if(ballY > 300) { ballX = 300; ballY = 150; dx = 4; dy = -4; score = 0; scoreEl.textContent = score; }
+            requestAnimationFrame(draw);
+        }
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            paddleX = Math.max(0, Math.min(canvas.width - 100, e.clientX - rect.left - 50));
+        });
+        draw();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
