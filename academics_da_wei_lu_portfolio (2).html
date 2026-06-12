@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DA-WEI LU // ACADEMIC_RECORD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;800&display=swap');
+        
+        body { background: #000; font-family: 'Space Mono', monospace; color: #0ff; overflow-x: hidden; cursor: none; }
+
+        #boot-screen {
+            position: fixed; inset: 0; z-index: 10000;
+            background: #000; display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            transition: opacity 0.8s ease;
+        }
+        .boot-text { color: #0ff; font-family: 'Orbitron'; letter-spacing: 0.5em; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+        .glitch-title {
+            position: relative;
+            display: inline-block;
+            animation: glitch-anim 2s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { transform: skew(0deg); opacity: 1; }
+            5% { transform: skew(5deg); opacity: 0.8; }
+            10% { transform: skew(-5deg); opacity: 1; }
+            15% { transform: skew(0deg); }
+        }
+
+        .bg-grid {
+            position: fixed; inset: 0; z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #061e1e 0%, #000 70%);
+        }
+
+        .cursor-trail {
+            position: fixed; width: 12px; height: 12px;
+            background: #0ff; border-radius: 50%;
+            pointer-events: none; z-index: 9999;
+            box-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+            will-change: transform;
+        }
+
+        .cyber-card {
+            background: rgba(0, 20, 30, 0.5);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(15px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .cyber-card:hover { border-color: #f0f; box-shadow: 0 0 20px rgba(255, 0, 255, 0.3); transform: translateY(-5px); }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .stagger-delay { transition-delay: 0.2s; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div id="boot-screen">
+        <h1 class="boot-text text-xl md:text-3xl">LOADING_ACADEMIC_DATA...</h1>
+        <div class="w-64 h-1 bg-zinc-800 mt-8 relative overflow-hidden">
+            <div id="progress" class="absolute h-full bg-cyan-400 w-0 transition-all duration-300"></div>
+        </div>
+    </div>
+
+    <div class="bg-grid"></div>
+    <div class="cursor-trail" id="cursor"></div>
+
+    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-12 h-24 bg-black/80 backdrop-blur-xl border-b border-cyan-900/50">
+        <a href="homepage.html" class="text-xl md:text-2xl font-bold tracking-[0.4em] text-white font-[Orbitron] hover:text-cyan-400">DA-WEI_LU</a>
+        
+        <nav class="hidden md:flex items-center space-x-12 text-xs font-bold uppercase tracking-[0.2em]">
+            <a href="homepage.html" class="hover:text-fuchsia-500 transition">/Home</a>
+            <a href="academics.html" class="text-fuchsia-500 underline">/Academics</a>
+            <a href="vex.html" class="hover:text-fuchsia-500 transition">/Robotics</a>
+            <a href="semiconductors.html" class="hover:text-fuchsia-500 transition">/Research</a>
+            <a href="other.html" class="hover:text-fuchsia-500 transition">/Other</a>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto pt-48 space-y-24">
+        <section class="reveal active">
+            <h2 class="glitch-title text-7xl md:text-9xl font-black tracking-tighter text-white">// ACADEMIC_DATA</h2>
+        </section>
+
+        <!-- Metrics -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-12 reveal stagger-delay">
+            <div class="cyber-card p-8">
+                <h3 class="text-sm font-bold text-cyan-500 tracking-[0.3em] mb-6">// SAT_SCORE</h3>
+                <div class="text-5xl font-black text-white mb-6">1490</div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div><p class="text-[10px] text-slate-400">Math</p><p class="text-2xl font-bold text-cyan-300">790</p></div>
+                    <div><p class="text-[10px] text-slate-400">RW</p><p class="text-2xl font-bold text-cyan-300">700</p></div>
+                </div>
+            </div>
+            <div class="cyber-card p-8">
+                <h3 class="text-sm font-bold text-cyan-500 tracking-[0.3em] mb-6">// GPA_SUMMARY</h3>
+                <div class="text-5xl font-black text-white mb-6">4.5</div>
+                <div class="space-y-4">
+                    <div><p class="text-[10px] text-slate-400">Unweighted</p><p class="text-xl font-bold text-cyan-300">93.1%</p></div>
+                </div>
+            </div>
+            <div class="cyber-card p-8">
+                <h3 class="text-sm font-bold text-cyan-500 tracking-[0.3em] mb-6">// TOEFL_PROFICIENCY</h3>
+                <div class="text-5xl font-black text-white mb-6">93</div>
+                <div class="grid grid-cols-2 gap-y-4 gap-x-2">
+                    <div><p class="text-[10px] text-slate-400">Reading</p><p class="text-lg font-bold text-cyan-300">27</p></div>
+                    <div><p class="text-[10px] text-slate-400">Listening</p><p class="text-lg font-bold text-cyan-300">22</p></div>
+                    <div><p class="text-[10px] text-slate-400">Speaking</p><p class="text-lg font-bold text-cyan-300">20</p></div>
+                    <div><p class="text-[10px] text-slate-400">Writing</p><p class="text-lg font-bold text-cyan-300">24</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AP Courses -->
+        <section class="reveal stagger-delay">
+            <h3 class="text-2xl font-bold text-fuchsia-400 mb-12 uppercase tracking-[0.3em]">// AP_COMPUTATION_LOAD</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Physics C: E&M (5)</h4><p class="text-xs text-cyan-500 mt-2">Analysis of electric and magnetic fields, potential, and induction laws.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Physics C: Mech (5)</h4><p class="text-xs text-cyan-500 mt-2">Calculus-based exploration of kinematics, energy, and rotational dynamics.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Calculus BC (5)</h4><p class="text-xs text-cyan-500 mt-2">Mastery of limits, differential and integral calculus, and infinite series.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Chemistry (5)</h4><p class="text-xs text-cyan-500 mt-2">Intensive study of atomic structure, intermolecular forces, and reaction kinetics.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Comp Sci A (5)</h4><p class="text-xs text-cyan-500 mt-2">Object-oriented programming proficiency using Java, covering data structures and algorithms.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Precalculus (5)</h4><p class="text-xs text-cyan-500 mt-2">Foundational analysis of algebraic and trigonometric functions for advanced math modeling.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Statistics (AP)</h4><p class="text-xs text-cyan-500 mt-2">Exploration of data collection, experimental design, and probability inference.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Biology (AP)</h4><p class="text-xs text-cyan-500 mt-2">Study of biological systems, from cellular processes to evolutionary patterns.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Macroeconomics (AP)</h4><p class="text-xs text-cyan-500 mt-2">Examination of national economic indicators, fiscal policies, and market aggregates.</p></div>
+                <div class="cyber-card p-6"><h4 class="font-bold text-white">AP Microeconomics (AP)</h4><p class="text-xs text-cyan-500 mt-2">Study of individual market behavior, resource allocation, and utility optimization.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        window.addEventListener('load', () => {
+            const progress = document.getElementById('progress');
+            const bootScreen = document.getElementById('boot-screen');
+            let width = 0;
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    bootScreen.style.opacity = '0';
+                    setTimeout(() => bootScreen.remove(), 800);
+                } else {
+                    width += 5;
+                    progress.style.width = width + '%';
+                }
+            }, 30);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
